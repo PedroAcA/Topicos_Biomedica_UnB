@@ -1,0 +1,5 @@
+Para artigo da atrefa 1 descrever:
+	->Nome dos autores
+	->Titulo do artigo
+	->Indicar que utilizou a biblioteca fantasia e com qual finalidade ("utilizou para fazer o que?")
+
