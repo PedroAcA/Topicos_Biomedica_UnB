@@ -1,0 +1,5 @@
+	No artigo entitulado "Real-Time Estimation of the ECG-Derived Respiration (EDR) Signal using a New Algorithm for 
+Baseline Wander Noise Removal", dos autores "Shivaram P. Arunachalam" e "Lewis F. Brown", o banco de dados "Fantasia", forne-
+cido pela Fisionet, foi utilizado com a finalidade de testar o algoritmo de remoção de ruído de base vagal dos sinais ECG (a
+partir dos quais se obtem sinais respiratórios) e comparar esses resultados com os sinais respiratórios que foram simultanea-
+mente gravados com os sinais ECG e estão presentes nessa base de dados.
