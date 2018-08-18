@@ -37,25 +37,42 @@ Resp_young3 = dados_young3.val(1,:);
 Resp_young6 = dados_young6.val(1,:);
 
 % Dados de ECG old e young
+ecg_old8 = dados_old8.val(2,:);
+ecg_old1 = dados_old1.val(2,:);
 ecg_young3 = dados_young3.val(2,:);
 ecg_young6 = dados_young6.val(2,:);
 
 intervalo = 0.004;% intervalo de amostragem
-intervalo_min = intervalo/60% converte o intervalo de segundos para minutos
+intervalo_min = intervalo/60;% converte o intervalo de segundos para minutos
 ind_meia_hora = 1+30*60/intervalo; % indice equivalente a meia hora de amostragem, considerando que
                                    % a indexacao do matalb comeca com 1 e nao com 0
 duracao_total = 5*60/intervalo; % numero de indices a se considerar para plotar 
                                 %5 min de sinal
 ind_final =  ind_meia_hora+duracao_total;% para plotar somente 5 minutos do sinal                               
 
+% Plot ECG e respiracao f1o08m
 subplot(2,2,1)% cria uma grade 2x2 (2 plots de 'old' e 2 de 'young') e posiciona
               % o primeiro plot na grade
+plot(30:intervalo_min:35,ecg_old8(ind_meia_hora:ind_final ) );
+xlabel('Tempo (min) decorrido do experimento')
+ylabel('Sinal amostrado (mV) considerando ganho de 2000 e base 0')
+title('Dados ECG de f1o08m.mat')
+
+
+subplot(2,2,2)              
 plot(30:intervalo_min:35,Resp_old8(ind_meia_hora:ind_final ) );
 xlabel('Tempo (min) decorrido do experimento')
 ylabel('Sinal amostrado (mV) considerando ganho de 2000 e base 0')
 title('Dados RESP de f1o08m.mat')
 
-subplot(2,2,2)
+% Plot ECG e respiracao f1o01m
+subplot(2,2,3)
+plot(30:intervalo_min:35,ecg_old1(ind_meia_hora:ind_final ) );
+xlabel('Tempo (min) decorrido do experimento')
+ylabel('Sinal amostrado (mV) considerando ganho de 2000 e base 0')
+title('Dados ECG de f1o01m.mat')
+
+subplot(2,2,4)
 plot(30:intervalo_min:35,Resp_old1(ind_meia_hora:ind_final ) );
 xlabel('Tempo (min) decorrido do experimento')
 ylabel('Sinal amostrado (mV) considerando ganho de 2000 e base 0')
