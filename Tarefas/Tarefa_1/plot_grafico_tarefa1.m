@@ -26,9 +26,20 @@ clear all
 
 %Tarefa: plotar os sinais ecg e resp para 2 pacientes jovens e 2 idosos
 dados_old8 = load('f1o08m.mat');
-dados_old1 = load('f1o01m.mat')
+dados_old1 = load('f1o01m.mat');
+dados_young3 = load('f1y03m.mat');
+dados_young6 = load('f2y06m.mat');
+
+% Dados de respiracao old e young
 Resp_old8 = dados_old8.val(1,:);
 Resp_old1 = dados_old1.val(1,:);
+Resp_young3 = dados_young3.val(1,:);
+Resp_young6 = dados_young6.val(1,:);
+
+% Dados de ECG old e young
+ecg_young3 = dados_young3.val(2,:);
+ecg_young6 = dados_young6.val(2,:);
+
 intervalo = 0.004;% intervalo de amostragem
 intervalo_min = intervalo/60% converte o intervalo de segundos para minutos
 ind_meia_hora = 1+30*60/intervalo; % indice equivalente a meia hora de amostragem, considerando que
@@ -49,3 +60,30 @@ plot(30:intervalo_min:35,Resp_old1(ind_meia_hora:ind_final ) );
 xlabel('Tempo (min) decorrido do experimento')
 ylabel('Sinal amostrado (mV) considerando ganho de 2000 e base 0')
 title('Dados RESP de f1o01m.mat')
+
+% Plot ECG e respiracao f1y03
+figure();
+subplot(2,2,1);
+plot(30:intervalo_min:35,ecg_young3(ind_meia_hora:ind_final ) );
+xlabel('Tempo (min)');
+ylabel('Sinal (mV)');
+title('Dados ECG de f1y03m.mat');
+
+subplot(2,2,2);
+plot(30:intervalo_min:35,Resp_young3(ind_meia_hora:ind_final ) );
+xlabel('Tempo (min)');
+ylabel('Sinal (mV)');
+title('Dados RESP de f1y03m.mat');
+
+% Plot ECG e respiracao f2y06
+subplot(2,2,3);
+plot(30:intervalo_min:35,ecg_young6(ind_meia_hora:ind_final ) );
+xlabel('Tempo (min)');
+ylabel('Sinal (mV)');
+title('Dados ECG de f2y06m.mat');
+
+subplot(2,2,4);
+plot(30:intervalo_min:35,Resp_young6(ind_meia_hora:ind_final ) );
+xlabel('Tempo (min)');
+ylabel('Sinal (mV)');
+title('Dados RESP de f2y06m.mat');
