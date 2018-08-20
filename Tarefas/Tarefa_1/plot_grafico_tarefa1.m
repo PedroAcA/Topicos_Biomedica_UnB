@@ -53,54 +53,54 @@ ind_final =  ind_meia_hora+duracao_total;% para plotar somente 5 minutos do sina
 % Plot ECG e respiracao f1o08m
 subplot(2,2,1)% cria uma grade 2x2 (2 plots de 'old' e 2 de 'young') e posiciona
               % o primeiro plot na grade
-plot(30:intervalo_min:35,ecg_old8(ind_meia_hora:ind_final ) );
+plot(30:intervalo_min:35,ecg_old8(ind_meia_hora:ind_final )/2000 );
 xlabel('Tempo (min) decorrido do experimento')
-ylabel('Sinal amostrado (mV) considerando ganho de 2000 e base 0')
+ylabel('Sinal amostrado (mV) ')
 title('Dados ECG de f1o08m.mat')
 
 
 subplot(2,2,2)              
-plot(30:intervalo_min:35,Resp_old8(ind_meia_hora:ind_final ) );
+plot(30:intervalo_min:35,Resp_old8(ind_meia_hora:ind_final )/2000 );
 xlabel('Tempo (min) decorrido do experimento')
-ylabel('Sinal amostrado (mV) considerando ganho de 2000 e base 0')
+ylabel('Sinal amostrado (mV) ')
 title('Dados RESP de f1o08m.mat')
 
 % Plot ECG e respiracao f1o01m
 subplot(2,2,3)
-plot(30:intervalo_min:35,ecg_old1(ind_meia_hora:ind_final ) );
+plot(30:intervalo_min:35,ecg_old1(ind_meia_hora:ind_final )/2000 );
 xlabel('Tempo (min) decorrido do experimento')
-ylabel('Sinal amostrado (mV) considerando ganho de 2000 e base 0')
+ylabel('Sinal amostrado (mV)')
 title('Dados ECG de f1o01m.mat')
 
 subplot(2,2,4)
-plot(30:intervalo_min:35,Resp_old1(ind_meia_hora:ind_final ) );
+plot(30:intervalo_min:35,Resp_old1(ind_meia_hora:ind_final )/2000 );
 xlabel('Tempo (min) decorrido do experimento')
-ylabel('Sinal amostrado (mV) considerando ganho de 2000 e base 0')
+ylabel('Sinal amostrado (mV)')
 title('Dados RESP de f1o01m.mat')
 
 % Plot ECG e respiracao f1y03
 figure();
 subplot(2,2,1);
-plot(30:intervalo_min:35,ecg_young3(ind_meia_hora:ind_final ) );
-xlabel('Tempo (min)');
+plot(30:intervalo_min:35,ecg_young3(ind_meia_hora:ind_final )/2000 );
+xlabel('Tempo (min) decorrido do experimento');
 ylabel('Sinal (mV)');
 title('Dados ECG de f1y03m.mat');
 
 subplot(2,2,2);
-plot(30:intervalo_min:35,Resp_young3(ind_meia_hora:ind_final ) );
-xlabel('Tempo (min)');
+plot(30:intervalo_min:35,Resp_young3(ind_meia_hora:ind_final )/2000 );
+xlabel('Tempo (min) decorrido do experimento');
 ylabel('Sinal (mV)');
 title('Dados RESP de f1y03m.mat');
 
 % Plot ECG e respiracao f2y06
 subplot(2,2,3);
-plot(30:intervalo_min:35,ecg_young6(ind_meia_hora:ind_final ) );
-xlabel('Tempo (min)');
+plot(30:intervalo_min:35,ecg_young6(ind_meia_hora:ind_final )/2000 );
+xlabel('Tempo (min) decorrido do experimento');
 ylabel('Sinal (mV)');
 title('Dados ECG de f2y06m.mat');
 
 subplot(2,2,4);
-plot(30:intervalo_min:35,Resp_young6(ind_meia_hora:ind_final ) );
-xlabel('Tempo (min)');
+plot(30:intervalo_min:35,Resp_young6(ind_meia_hora:ind_final )/2000 );
+xlabel('Tempo (min) decorrido do experimento');
 ylabel('Sinal (mV)');
 title('Dados RESP de f2y06m.mat');

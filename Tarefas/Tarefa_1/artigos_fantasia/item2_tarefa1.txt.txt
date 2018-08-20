@@ -5,4 +5,8 @@ partir dos quais se obtem sinais respiratórios) e comparar esses resultados com 
 mente gravados com os sinais ECG e estão presentes nessa base de dados.
 
 	Já no artigo "Individual identification using electrocardiogram morphology", dos autores Antonio Fratini, Mario Sansone,
-Paolo Bifulco, Maria Romano, Alessandro Pepino, Mario Cesarelli e Giovanni D’Addio, o banco de dados Fantasia foi utilizado para testar e avaliar um método de identificação biométrica de indivíduos utilizando a morfologia do batimento cardíaco e dessa forma, comparar com outros métodos propostos que utilizaram o mesmo banco de dados para testes. É importante pontuar que os autores afirmam que os testes unicamente utilizando o Fantasia não são completamente suficientes, ainda é necessário fazer testes utilizando diferentes gravações de um mesmo indivíduo ou durante atividades físicas.   
+Paolo Bifulco, Maria Romano, Alessandro Pepino, Mario Cesarelli e Giovanni D’Addio, o banco de dados Fantasia foi utilizado 
+para testar e avaliar um método de identificação biométrica de indivíduos utilizando a morfologia do batimento cardíaco e,
+ dessa forma, comparar com outros métodos propostos que utilizaram o mesmo banco de dados para testes. É importante pontuar 
+que os autores afirmam que os testes unicamente utilizando o Fantasia não são completamente suficientes, ainda é necessário 
+fazer testes utilizando diferentes gravações de um mesmo indivíduo ou durante atividades físicas.   
